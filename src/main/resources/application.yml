@@ -1,0 +1,17 @@
+micronaut:
+  application:
+    name: "balance"
+  http:
+    client:
+      logger-name: clientLogger
+
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/balance
+    driverClassname: org.postgresql.Driver
+
+liquibase:
+  datasources:
+    default:
+      change-log: 'classpath:db/changelog.xml'
+      liquibase-schema: 'liquibase'
